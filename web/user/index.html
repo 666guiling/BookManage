@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../asserts/plugins/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding: 50px;
+        }
+        td{
+            text-align: center;
+        }
+        body{
+            background: url('../asserts/image/2.jpeg') no-repeat;
+            background-size:cover
+        }
+        #example2 {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 50px 20px;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        #example1
+        {
+            margin-top: 5%;;
+            border:2px solid #a1a1a1;
+            padding:10px 40px;
+            background:#dddddd;
+            width:300px;
+            border-radius:25px;
+        }
+        p{
+            color: #2a62d2;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top container" role="navigation">
+    <div class="container-fluid">
+        <div>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="index.html">主页</a></li>
+                <li><a href="toUser.html">个人中心</a></li>
+                <li><a href="toBook.html">书架</a></li>
+                <li><a href="toBorrow.html">我的借阅</a></li>
+                <li><a href="../UserController?action=logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="example2" class="container">
+    <p>书籍是人类进步的阶梯</p>
+</div>
+<div id="example1" class="container">
+    <p>多读书多看报，多看美女，多睡觉。</p>
+</div>
+</body>
+</html>

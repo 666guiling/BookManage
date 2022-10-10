@@ -1,0 +1,16 @@
+body{
+    padding: 50px;
+    background: url('../../image/2.jpeg') no-repeat;
+    background-size:cover
+}
+td,th,#row-1{
+    text-align: center;
+
+}
+input{
+    margin-top: 10px;
+}
+#row-1,#div-1{
+    background-image: linear-gradient(to right, #30cfd0, #330867);
+    text-align: center;
+}

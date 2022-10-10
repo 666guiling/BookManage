@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <!-- 引入本地 Bootstrap 样式-->
+    <link href="../asserts/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--引入本地 JQuery 文件-->
+    <script src="../asserts/plugins/JQuery/jquery-3.6.0.min.js"></script>
+    <!--引入本地 Bootstrap js文件-->
+    <script src="../asserts/plugins/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../asserts/css/admin/index.css">
+    <script src="../asserts/js/admin/toUser.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top container" role="navigation">
+    <div class="container-fluid">
+        <div>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="index.html">主页</a></li>
+                <li><a href="toUser.html">个人中心</a></li>
+                <li><a href="getUserList.html">查看所有用户</a></li>
+                <li><a href="getBookList.html">查看所有图书</a></li>
+                <li><a href="addBook.html">添加图书信息</a></li>
+                <li><a href="queryBorrow.html">查看用户借阅信息</a></li>
+                <li><a href="../AdminController?action=logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" >
+    <table class="table table-bordered table-condensed table table-hover" id="table">
+        <thead>
+        <tr>
+            <th>头像</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>id</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="form-group">
+        <a class="btn btn-default" href="update.html" role="button">编辑个人信息</a>
+        <a class="btn btn-default" href="rPassword.html" role="button">修改密码</a>
+    </div>
+</div>
+</body>
+</html>

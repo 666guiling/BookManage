@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人借阅信息</title>
+    <link href="../asserts/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="../asserts/plugins/JQuery/jquery-3.6.0.min.js"></script>
+    <script src="../asserts/plugins/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding: 50px;
+            background: url('../asserts/image/2.jpeg') no-repeat;
+            background-size:cover
+        }
+        th,td{
+            text-align: center;
+        }
+
+    </style>
+    <script src="../asserts/js/user/toBorrow.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top container" role="navigation">
+    <div class="container-fluid">
+        <div>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="index.html">主页</a></li>
+                <li><a href="toUser.html">个人中心</a></li>
+                <li><a href="toBook.html">书架</a></li>
+                <li><a href="toBorrow.html">我的借阅</a></li>
+                <li><a href="../UserController?action=logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <table class="table table-bordered table-condensed table table-hover" id="table">
+        <thead>
+        <tr>
+            <th>借阅用户</th>
+            <th>借阅图书</th>
+            <th>借阅状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

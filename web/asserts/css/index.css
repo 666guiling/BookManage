@@ -1,0 +1,17 @@
+h2{
+    color: #2aabd2;
+}
+body{
+    background: url('../image/星河.jpg') no-repeat;
+    background-size:cover
+}
+.container {
+    width: 20%;
+    height: 400px;
+    background-color: #00000060;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 50px;
+}

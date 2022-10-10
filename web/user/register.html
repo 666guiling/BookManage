@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>注册页面</title>
+    <!-- 引入本地 Bootstrap 样式-->
+    <link href="../asserts/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--引入本地 JQuery 文件-->
+    <script src="../asserts/plugins/JQuery/jquery-3.6.0.min.js"></script>
+    <!--引入本地 Bootstrap js文件-->
+    <script src="../asserts/plugins/bootstrap/js/bootstrap.js"></script>
+    <!--引入线上 bootstrap-validator 校验 js 文件-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <!--引入线上支持中文校验 js 文件-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-validator/0.5.3/js/language/zh_CN.js"></script>
+    <script src="../asserts/js/user/register.js"></script>
+    <style>
+        #row-1{
+            text-align: center;
+            background-image: linear-gradient(to right, white, papayawhip);
+        }
+        body{
+            background: url('../asserts/image/2.jpeg') no-repeat;
+            background-size:cover
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron" id="row-1">
+        <h1>注册页面</h1>
+    </div>
+    <form id="form">
+        <img id="img" width="10%" height="10%"><br/>
+        <div>上传头像：
+            <input type="file" id="file"><br>
+        </div>
+        <div class="form-group">
+            <label>用户名</label><span id="span"></span>
+            <input type="text" class="form-control" name="username" id="username">
+        </div>
+        <div class="form-group">
+            <label>密码</label>
+            <input type="text" class="form-control" name="password" id="password">
+        </div>
+        <div class="form-group">
+            <label>手机</label>
+            <input type="text" class="form-control" name="phone" id="phone">
+        </div>
+        <div class="form-group">
+            <label>性别</label>
+            <select id="sex">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-default" type="button" value="注册" id="button_id">
+        </div>
+    </form>
+</div>
+</body>
+</html>

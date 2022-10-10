@@ -1,0 +1,23 @@
+.container {
+    width: 20%;
+    height: 400px;
+    background-color: #00000060;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 50px;
+}
+body{
+    background: url('../image/星河.jpg') no-repeat;
+    background-size:cover
+}
+h2,#role{
+    background-image: linear-gradient(to right, #30cfd0, #330867);
+    margin-top: 5%;
+    border-radius: 25px;
+}
+.form-group{
+    color: rgba(255, 255, 255, 0.56);
+    margin-top: 5%;
+}

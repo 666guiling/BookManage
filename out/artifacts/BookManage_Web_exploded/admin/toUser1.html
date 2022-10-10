@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示用户信息</title>
+    <link href="../asserts/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="../asserts/plugins/JQuery/jquery-3.6.0.min.js"></script>
+    <script src="../asserts/plugins/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../asserts/css/admin/index.css">
+    <script>
+        let id = window.sessionStorage.getItem('id');
+        $(function (){
+            $.ajax({
+                url:"/BookManage/AdminController",
+                data:{
+                    action:'toUser1',
+                    id:id
+                },
+                type:'get',
+                dataType:"json",
+                success:function (respBean){
+                    if(respBean.status == 500){
+                        alert(respBean.msg);
+                        location.href='index.html';
+                    }else if(respBean.status == 200){
+                        btn(respBean);
+                    }
+                }
+            })
+        })
+        function btn(respBean){
+                tr = "<tr>" +
+                    "<td>" + respBean.data.id + "</td>" +
+                    "<td class='td_img'><img width='100px' src='" + respBean.data.imgUrl + "' class='img-circle'></td>" +
+                    "<td>" + respBean.data.username + "</td>" +
+                    "<td>" + respBean.data.password + "</td>" +
+                    "<td>" + respBean.data.phone + "</td>" +
+                    "<td>" + respBean.data.sex + "</td>" +
+                    "</tr>";
+                $("#tbody").append(tr);
+        }
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top container" role="navigation">
+    <div class="container-fluid">
+        <div>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="index.html">主页</a></li>
+                <li><a href="toUser.html">个人中心</a></li>
+                <li><a href="getUserList.html">查看所有用户</a></li>
+                <li><a href="getBookList.html">查看所有图书</a></li>
+                <li><a href="addBook.html">添加图书信息</a></li>
+                <li><a href="queryBorrow.html">查看用户借阅信息</a></li>
+                <li><a href="../AdminController?action=logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    </form>
+    <table class="table table-bordered table-condensed" id="table">
+        <thead>
+        <tr>
+            <th>用户id</th>
+            <th>头像</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>电话号码</th>
+            <th>性别</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
